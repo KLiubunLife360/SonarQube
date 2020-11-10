@@ -1,5 +1,3 @@
-
-
 # Build
 build
 .gradle
@@ -7,8 +5,6 @@ build
 data/
 out/
 *.class
-
-
 
 # editor
 .idea
