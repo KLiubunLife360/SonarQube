@@ -1,0 +1,15 @@
+
+
+# Build
+build
+.gradle
+
+data/
+out/
+*.class
+
+
+
+# editor
+.idea
+*.iml

@@ -1,0 +1,40 @@
+plugins {
+    id "jacoco"
+    id "java"
+    id "application"
+    id "org.sonarqube" version "3.0"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+sonarqube {
+    properties {
+        property 'sonar.projectName', 'Example of SonarQube Scanner for Gradle Usage'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // This dependency is found on compile classpath of this component and consumers.
+    compile 'com.google.guava:guava:21.0'
+
+    testCompile 'junit:junit:4.12'
+}
+
+// Define the main class for the application
+mainClassName = 'App'
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
+}
